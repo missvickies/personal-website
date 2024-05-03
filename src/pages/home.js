@@ -18,18 +18,18 @@ export default function Home(){
         <Grid>
             <div></div>
             <SubGrid>
-                <Links>
+                {/* <Links>
                     <FlexLinks/>
-                </Links>
+                </Links> */}
                 <Photo/>
-                {/* <Star1>
+                <Star1>
                     <img src = {StarImg2} alt = "stars"/>
                 </Star1>
-                <Star2>
+                {/* <Star2>
                     <img src = {StarImg1} alt = "star"></img>
                 </Star2> */}
-                {/* <Note/>
-                <Note color = "var(--yellow)"/>
+                {/* <Note uid="1"/>
+                <Note uid = "1" color = "var(--yellow)"/>
                 <Note color = "var(--pink)"/> */}
                 {/* <Coffee>
                     <img src = {CoffeeImg} alt = "coffee mug"></img>
@@ -201,7 +201,7 @@ grid-row: 12/20;
 
 @media ${device.laptop} { 
     grid-column: 9 / -1;
-    grid-row:5/-1;
+    grid-row: 5/-2;
 }
 @media ${device.desktop} { 
     grid-column: 15 / -1;

@@ -1,7 +1,7 @@
 body{
     background-image: radial-gradient(rgba(255, 255, 255, 0.5) 15%, transparent 0);
-    /* background-color: green; */
     background-position: 0 0 ;
     background-size: 75px 75px;
+    /* overflow:hidden; */
 }
 
