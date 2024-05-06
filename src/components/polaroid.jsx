@@ -1,20 +1,17 @@
 import styled from "styled-components"
-import {useDraggable} from '@dnd-kit/core';
-import { Children } from "react";
-import amplifyImage from '../assets/project-img/amplify.jpeg';
 
 
-export default function Polaroid({uid,row,col}){
-    const {attributes, listeners, setNodeRef, transform} = useDraggable({
-        id: uid,
-      });
-      const style = transform ? {
-        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-      } : undefined;
+export default function Polaroid({children,row,col}){
+    const picture = children[0]
+    const title = children[1]
     return (
-        <PolaroidBorder row={row} col = {col} ref={setNodeRef} style={style} {...listeners} {...attributes}>
-            <Image></Image>
-            <Description><p>Amplify Winner</p></Description>
+        <PolaroidBorder row={row} col = {col}>
+            <Image>
+                {picture}
+            </Image>
+            <Description>
+                {title}
+            </Description>
         </PolaroidBorder>
     )
 }
@@ -29,7 +26,7 @@ const PolaroidBorder = styled.div`
     display:flex;
     height:220px;
     width:200px;
-    padding:15px;
+    padding:20px;
     flex-direction: column;
     justify-content: center;
 `
@@ -41,12 +38,11 @@ const Description =  styled.div`
     padding-bottom:20px;
 `
 const Image = styled.div`
-    height:200px;
-    background-image: url(${amplifyImage});
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
 `
-
 
 

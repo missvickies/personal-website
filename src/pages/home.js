@@ -9,10 +9,41 @@ import StarImg2 from '../assets/profile-img/Star.svg'
 import CoffeeImg from '../assets/profile-img/mug.svg'
 import Note from "../components/note"
 import { device } from '../components/device';
-import DragArea from '../components/dragarea'
+import Polaroid from '../components/polaroid';
+import amplifyImage from '../assets/project-img/amplify.jpeg';
 
 export default function Home(){
-    // document.body.style.backgroundColor= "var(--green)";
+
+    const notes = [
+        {
+            uid: "0",
+            row:3,
+            col:2,
+            color: "var(--yellow)",
+            text:"fun fact"
+        },
+        {
+            uid: "1",
+            row:4,
+            col:1,
+            color: "var(--pink)",
+            text:"another one"
+        },
+        {
+            uid: "2",
+            row:7,
+            col:4,
+            color: "var(--blue)",
+            text:"seomthing else"
+        },
+        {
+            uid: "3",
+            row:6,
+            col:5,
+            color: "var(--darkblue)",
+            text:"project details"
+        },
+    ]
 
     return(
         <Grid>
@@ -21,20 +52,25 @@ export default function Home(){
                 {/* <Links>
                     <FlexLinks/>
                 </Links> */}
-                <Photo/>
-                <Star1>
+                {/* <Photo/> */}
+                {/* <Star1>
                     <img src = {StarImg2} alt = "stars"/>
-                </Star1>
-                {/* <Star2>
+                </Star1> */}
+                <Star2>
                     <img src = {StarImg1} alt = "star"></img>
-                </Star2> */}
+                </Star2>
                 {/* <Note uid="1"/>
                 <Note uid = "1" color = "var(--yellow)"/>
                 <Note color = "var(--pink)"/> */}
                 {/* <Coffee>
                     <img src = {CoffeeImg} alt = "coffee mug"></img>
                 </Coffee> */}
-                <DragArea></DragArea>
+
+                {notes.map((note)=>(
+                    <Note uid={note.uid} row={note.row} col={note.col} color={note.color}><p>{note.text}</p></Note>
+                ))}
+                <Polaroid uid="rbc" row="7"col="1"><img alt="" src = {amplifyImage}/><p>Amplify 2022</p></Polaroid>
+                <Polaroid uid="rbc" row="2"col="5"><img alt = "" src = {Dp}/><p></p></Polaroid>
                 <Intro><BorderedText>Hello my name is...</BorderedText></Intro>
                 <HorizontalLinks>
                     <FlexLinks/>
@@ -58,8 +94,8 @@ const Star2 = styled.div`
     -webkit-animation:spin 4s linear infinite;
 
     @media ${device.laptop}{
-        grid-column-start: 6;
-        grid-row-start: -3;
+        grid-column-start: 7;
+        grid-row-start: 2;
     }
 
 `
@@ -118,6 +154,7 @@ export const SubGrid = styled.div`
     grid-template-rows: repeat(auto-fill, 75px);
     width: 100%;
     height:100%;
+    overflow: hidden;  /* NEW */
 `;
 
 export const Links = styled.div`
