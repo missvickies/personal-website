@@ -27,11 +27,6 @@
     ]
   },
   "browserslist": {
-    "rules": {
-      "no-unused-vars": "warn",
-      "no-undef": "warn",
-      "img-uses-alt": "warn"
-    },
     "production": [
       ">0.2%",
       "not dead",
