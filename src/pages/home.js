@@ -26,7 +26,7 @@ export default function Home(){
             <div>
                 <p>Fun Fact:</p>
                 <p>I am a FRC robotics alumni. We won the rookie of the year award!</p>
-                <img height="50px"src="https://upload.wikimedia.org/wikipedia/en/f/f0/FRC_Logo.svg"></img>
+                <img alt = "FRC logo" height="50px"src="https://upload.wikimedia.org/wikipedia/en/f/f0/FRC_Logo.svg"></img>
             </div>
         },
         {
@@ -82,8 +82,8 @@ export default function Home(){
                     <Note uid={note.uid} row={note.row} col={note.col} color={note.color}><p>{note.text}</p>
                     </Note>
                 ))}
-                <Polaroid uid="rbc" row="7"col="1"><img alt="" src = {amplifyImage}/><p>RBC Amplify 2022</p></Polaroid>
-                <Polaroid uid="rbc" row="2"col="5"><img alt = "" src = {Dp}/></Polaroid>
+                <Polaroid uid="rbc" row="7"col="1"><img alt="rbc amplify picture" src = {amplifyImage}/><p>RBC Amplify 2022</p></Polaroid>
+                <Polaroid uid="rbc" row="2"col="5"><img alt = "profile picture" src = {Dp}/></Polaroid>
                 <Intro><BorderedText>Hello my name is...</BorderedText></Intro>
                 <HorizontalLinks>
                     <FlexLinks/>
