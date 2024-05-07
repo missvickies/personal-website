@@ -4,6 +4,7 @@
   --darkblue:#0D99FF;
   --green:#14AE5C;
   --yellow:#FFE79A;
+  --purple:#7B61FF;
   --fullwidth: 100%;
 }
 body {
@@ -23,6 +24,10 @@ html{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  all: unset;
 }
 
 

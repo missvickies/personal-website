@@ -7,10 +7,10 @@ export default function Polaroid({children,row,col}){
     return (
         <PolaroidBorder row={row} col = {col}>
             <Image>
-                {picture}
+                {picture? picture: children}
             </Image>
             <Description>
-                {title}
+                {title? title: <Test></Test>}
             </Description>
         </PolaroidBorder>
     )
@@ -24,21 +24,24 @@ const PolaroidBorder = styled.div`
     grid-row:${(props)=> props.row};
     grid-column:${(props)=> props.col};
     display:flex;
-    height:220px;
+    height:250px;
     width:200px;
-    padding:20px;
     flex-direction: column;
     justify-content: center;
 `
 
 const Description =  styled.div`
-    height:20px;
-    padding-left:20px;
-    padding-right:20px;
-    padding-bottom:20px;
+    background:#EFEFEF;
+    color:#776F6F;
+    padding:10px 0 10px 0;
+    font-size:0.9em;
+`
+const Test =styled.div`
+padding:20px 0 20px 0;
 `
 const Image = styled.div`
-    height: 200px;
+    margin:15px;
+    height:100%;
     overflow: hidden;
     display: flex;
     justify-content: center;

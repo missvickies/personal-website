@@ -9,7 +9,6 @@ function AppRouter() {
          <Route exact path="/" element = {<Home></Home>} />
          <Route exact path="/home" element = {<Home/>} />
          <Route exact path="/projects" element = {<Projects/>} />
-       
        </Routes>
    </BrowserRouter>
 

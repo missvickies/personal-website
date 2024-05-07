@@ -2,19 +2,25 @@ import GithubLink from '../assets/link-img/github.svg'
 import LinkedinLink from '../assets/link-img/linkedin.svg'
 import CodepenLink from '../assets/link-img/codepen.svg'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export default function FlexLinks() {
     return(
         <FlexContainer>
             <FlexItem>
+                <a href="https://github.com/missvickies">
                 <img src = {GithubLink} alt="github link"/>
+                </a>
             </FlexItem>
             <FlexItem>
+            <a href="https://linkedin.com/in/missvickies">
             <img src = {LinkedinLink} alt="Linkedin link"/>
-
+            </a>
             </FlexItem>
             <FlexItem>
+            <a href="https://codepen.io/MissesVickies">
             <img src = {CodepenLink} alt="codepen link"/>
+            </a>
             </FlexItem>
            
         </FlexContainer>

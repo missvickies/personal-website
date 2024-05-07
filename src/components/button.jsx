@@ -1,13 +1,19 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
-export default function Button({col,children}){
+
+export default function Button({col,children,linkTo,mailTo}){
     
     return (
         <ButtonStyle col = {col}>
-            {children}
+            <Link to={linkTo? linkTo:""} onClick={mailTo? (e) => {
+                window.location.href = mailTo;
+                e.preventDefault();
+            }:null}>{children}</Link>
         </ButtonStyle>
     )
 }
+
 
 const ButtonStyle = styled.div`
     grid-column:${(props)=> props.col};
@@ -22,6 +28,14 @@ const ButtonStyle = styled.div`
     border-radius: 15px;
     z-index:1;
     white-space: nowrap;
+    &:hover{
+        background-color: var(--yellow)
+    }
+    &:active {
+    background-color: var(--yellow);
+    box-shadow: -5px 5px 0px #000000;
+    transform: translate(-10px,10px);
+    }
 `
 
 

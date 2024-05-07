@@ -13,6 +13,8 @@ import Polaroid from '../components/polaroid';
 import amplifyImage from '../assets/project-img/amplify.jpeg';
 
 export default function Home(){
+    document.body.style.backgroundColor= "var(--green)";
+
 
     const notes = [
         {
@@ -20,14 +22,24 @@ export default function Home(){
             row:3,
             col:2,
             color: "var(--yellow)",
-            text:"fun fact"
+            text:
+            <div>
+                <p>Fun Fact:</p>
+                <p>I am a FRC robotics alumni. We won the rookie of the year award!</p>
+                <img height="50px"src="https://upload.wikimedia.org/wikipedia/en/f/f0/FRC_Logo.svg"></img>
+            </div>
         },
         {
             uid: "1",
             row:4,
             col:1,
             color: "var(--pink)",
-            text:"another one"
+            text:
+            <div>
+                <p>I'm most familiar with</p>
+                <p>- Python</p>
+                <p>- React</p>
+            </div>
         },
         {
             uid: "2",
@@ -67,10 +79,11 @@ export default function Home(){
                 </Coffee> */}
 
                 {notes.map((note)=>(
-                    <Note uid={note.uid} row={note.row} col={note.col} color={note.color}><p>{note.text}</p></Note>
+                    <Note uid={note.uid} row={note.row} col={note.col} color={note.color}><p>{note.text}</p>
+                    </Note>
                 ))}
-                <Polaroid uid="rbc" row="7"col="1"><img alt="" src = {amplifyImage}/><p>Amplify 2022</p></Polaroid>
-                <Polaroid uid="rbc" row="2"col="5"><img alt = "" src = {Dp}/><p></p></Polaroid>
+                <Polaroid uid="rbc" row="7"col="1"><img alt="" src = {amplifyImage}/><p>RBC Amplify 2022</p></Polaroid>
+                <Polaroid uid="rbc" row="2"col="5"><img alt = "" src = {Dp}/></Polaroid>
                 <Intro><BorderedText>Hello my name is...</BorderedText></Intro>
                 <HorizontalLinks>
                     <FlexLinks/>
@@ -94,7 +107,7 @@ const Star2 = styled.div`
     -webkit-animation:spin 4s linear infinite;
 
     @media ${device.laptop}{
-        grid-column-start: 7;
+        grid-column-start: 1;
         grid-row-start: 2;
     }
 
