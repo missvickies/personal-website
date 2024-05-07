@@ -37,7 +37,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },  
+  },
   "CI": false,
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
@@ -47,6 +47,7 @@
     "styled-components": "^5"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "file-loader": "^6.2.0"
   }
 }
