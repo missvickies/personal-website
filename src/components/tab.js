@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import {device} from "./device"
 import Button from "./button"
+
 export default function Tab(){
     return (
         <FlexContainer> 
@@ -24,21 +25,25 @@ export default function Tab(){
     )
 }
 const FlexContainer =  styled.div`
-display:grid;
-height:100%;
-grid-template-columns: repeat(auto-fill, 75px);
-grid-template-rows: repeat(auto-fill, 75px);
+    display:grid;
+    height:100%;
+    grid-template-columns: repeat(auto-fill, 75px);
+    grid-template-rows: repeat(auto-fill, 75px);
 `
 const BorderCard = styled.div`
-background-color: white;
-border: 5px solid #000000;
-border-radius: 5px;
-margin-top:-5px;
-grid-column: 1/-1;
-grid-row: 2 /-1;
-padding: 25px 24px;
+    background-color: white;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    padding: 25px;
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    display:flex-column;
+
 @media ${device.desktop} { 
     padding: 50px;
+    margin-top:-5px;
+    grid-column: 1/-1;
+    grid-row: 2 /-1;
 }
 `
 const BorderText = styled.div`

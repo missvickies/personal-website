@@ -167,7 +167,10 @@ export const SubGrid = styled.div`
     grid-template-rows: repeat(auto-fill, 75px);
     width: 100%;
     height:100%;
-    overflow: hidden;  /* NEW */
+
+    @media ${device.laptop}{
+        overflow: hidden;  
+    }
 `;
 
 export const Links = styled.div`
@@ -180,6 +183,8 @@ export const Links = styled.div`
 `;
 
 export const HorizontalLinks = styled.div`
+    grid-column: 7/-1;
+    grid-row:  2;
 @media ${device.laptop} { 
     grid-column: 15 / -1;
     grid-row:  2;
@@ -220,10 +225,14 @@ export const Photo = styled.div`
 
 export const Intro = styled.div`
 
-grid-column: 1 / -1;
+grid-column: 1 /5;
 grid-row:2;
 
     @media ${device.laptop} { 
+        grid-column: 9 / 13;
+        grid-row:2;
+    }
+    @media ${device.laptopL} { 
         grid-column: 9 / 13;
         grid-row:2;
     }
