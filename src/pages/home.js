@@ -76,12 +76,12 @@ export default function Home(){
                     <Note uid={note.uid} row={note.row} col={note.col} color={note.color}><p>{note.text}</p>
                     </Note>
                 ))}
-                <Polaroid uid="rbc" row="7"col="1"><img alt="rbc amplify picture" src = {amplifyImage}/><p>RBC Amplify 2022</p></Polaroid>
-                <Polaroid uid="rbc" row="2"col="5"><img alt = "profile picture" src = {Dp}/></Polaroid>
-                <Intro><BorderedText>Hello my name is...</BorderedText></Intro>
-                <HorizontalLinks>
+                <Polaroid uid="rbc" row={7}col={1}><img alt="rbc amplify picture" src = {amplifyImage}/><p>RBC Amplify 2022</p></Polaroid>
+                <Polaroid uid="rbc" row={2}col={5}><img alt = "profile picture" src = {Dp}/></Polaroid>
+                <Intro>
+                    <BorderedText>Hello my name is...</BorderedText>
                     <FlexLinks/>
-                </HorizontalLinks>
+                </Intro>
                 <Name><Title>Vicki Chen</Title></Name>
                 <About>
                     <Tab></Tab>
@@ -93,11 +93,10 @@ export default function Home(){
 }
 
 const Star2 = styled.div`
+    grid-column-start: 6;
+    grid-row-start: 5;
     
-
     @media ${device.laptop}{
-        grid-column-start: 1;
-        grid-row-start: 2;
         z-index:1;
         grid-column-start: 7;
         grid-row-start: 3;
@@ -143,52 +142,50 @@ const Star1 = styled.div`
 
 export const Grid = styled.div`
     display:grid;
-    grid-template-columns: 75px auto 75px;
     width: 100vw;
     height:100vh;
+
+    @media ${device.mobileS}{
+        grid-template-columns: 25px auto 25px;
+    }
+    @media ${device.tablet}{
+        grid-template-columns: 75px auto 75px;
+
+    }
     
 `;
 
 export const SubGrid = styled.div`
     display:grid;
-    grid-template-columns: repeat(auto-fill, 75px);
-    grid-template-rows: repeat(auto-fill, 75px);
     width: 100%;
     height:100%;
+    grid-template-columns: repeat(auto-fill, 75px);
+    grid-template-rows: repeat(auto-fill, 75px);
 
-    @media ${device.laptop}{
-        overflow: hidden;  
+    @media ${device.mobileS} { 
+        grid-template-columns: repeat(auto-fill, 50px);
+        grid-template-rows: repeat(auto-fill, 50px);
+
+    }
+    @media ${device.tablet} { 
+        grid-template-columns: repeat(auto-fill, 75px);
+        grid-template-rows: repeat(auto-fill, 75px);
+    }
+
+    @media ${device.laptop} { 
+        grid-template-columns: repeat(auto-fill, 75px);
+        grid-template-rows: repeat(auto-fill, 75px);
     }
 `;
 
 export const Links = styled.div`
     display:none;
-@media ${device.laptop} { 
-    display:block;
-    grid-column-start: 1;
-    grid-row:  4 / 7;
-}
+    @media ${device.laptop} { 
+        display:block;
+        grid-column-start: 1;
+        grid-row:  4 / 7;
+    }
 `;
-
-export const HorizontalLinks = styled.div`
-grid-row:  2;
-@media ${device.mobileS} { 
-    grid-column: 1 / -1;
-    grid-row:  5;
-}
-@media ${device.tablet} { 
-    grid-column: -4 / -1;
-    grid-row:  2;
-}
-@media ${device.laptop} { 
-    grid-column: -5 / -2;
-    grid-row:  2;
-}
-@media ${device.desktop} { 
-    grid-column: 30 / -1;
-}
-`;
-
 export const Photo = styled.div`
         grid-column: 1 / -1;
         grid-row: 5/12;
@@ -220,21 +217,25 @@ export const Photo = styled.div`
 
 export const Intro = styled.div`
 
-    grid-column: 1 /5;
     grid-row:2;
-
-    @media ${device.laptop} { 
-        grid-column: 9 / 13;
-        grid-row:2;
+    grid-column: 9/-1;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    @media ${device.mobileS} { 
+        grid-column: 1/-1;
+    }
+    @media ${device.tablet} { 
+        grid-column: 9 / -1;
     }
     @media ${device.desktop} { 
-        grid-column: 15 / 19;
+        grid-column: 15/24;
     }
 `
 export const Name = styled.div`
     grid-column: 1 / -1;
-    grid-row:3/5;
-    background-color:var(--green);
+    grid-row:3;
 
     @media ${device.laptop} { 
         grid-column: 9 / -1;
@@ -247,14 +248,14 @@ export const Name = styled.div`
 `
 export const About = styled.div`
 grid-column: 1 / -1;
-grid-row: 12/20;
+grid-row: 11/-1;
 
 @media ${device.laptop} { 
     grid-column: 9 / -1;
     grid-row: 5/-2;
 }
 @media ${device.desktop} { 
-    grid-column: 15 / -1;
+    grid-column: 15 / 24;
 }
 `
 

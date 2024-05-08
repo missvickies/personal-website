@@ -2,6 +2,7 @@ import GithubLink from '../assets/link-img/github.svg'
 import LinkedinLink from '../assets/link-img/linkedin.svg'
 import CodepenLink from '../assets/link-img/codepen.svg'
 import styled from 'styled-components';
+import { device } from './device';
 
 export default function FlexLinks() {
     return(
@@ -12,14 +13,14 @@ export default function FlexLinks() {
                 </a>
             </FlexItem>
             <FlexItem>
-            <a href="https://linkedin.com/in/missvickies">
-            <img src = {LinkedinLink} alt="Linkedin link"/>
-            </a>
+                <a href="https://linkedin.com/in/missvickies">
+                <img src = {LinkedinLink} alt="Linkedin link"/>
+                </a>
             </FlexItem>
             <FlexItem>
-            <a href="https://codepen.io/MissesVickies">
-            <img src = {CodepenLink} alt="codepen link"/>
-            </a>
+                <a href="https://codepen.io/MissesVickies">
+                <img src = {CodepenLink} alt="codepen link"/>
+                </a>
             </FlexItem>
            
         </FlexContainer>
@@ -29,13 +30,14 @@ export default function FlexLinks() {
 const FlexContainer = styled.div`
     display:flex;
     justify-content: space-evenly;
-    flex-wrap:wrap;
-    background-color:var(--green);
 `
 
 const FlexItem = styled.div`
-    width:75px;
-    height:75px;
+    img{
+        width:50px;
+        height:50px;
+
+    }
 
     img:hover{
         transform: scale(1.5, 1.5);

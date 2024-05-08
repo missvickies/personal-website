@@ -22,36 +22,59 @@ export default function Tab(){
 }
 
 const FlexContainer =  styled.div`
-    display:grid;
     height:100%;
     grid-template-columns: repeat(auto-fill, 75px);
     grid-template-rows: repeat(auto-fill, 75px);
+    
+    @media ${device.mobileS}{
+        grid-template-columns: repeat(auto-fill, 50px);
+        grid-template-rows: repeat(auto-fill, 50px);
+        display:flex-column;
+    }
+    @media ${device.tablet}{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, 50px);
+        grid-template-rows: repeat(auto-fill, 50px);
+        display:flex-column;
+    }
+
 `
 const BorderCard = styled.div`
     background-color: white;
     padding: 25px;
     grid-column: 1/-1;
-    margin-top:-5px;
-    grid-row: 2 / -1;
-    display:flex-column;
+    grid-row: 2 /-1;
 
-    @media ${device.mobileS} { 
-        padding: 25px;
-        grid-column: 1/-1;
+    @media ${device.tablet} { 
+        padding: 20px;
+        grid-column: 2/-1;
     }
-    @media ${device.desktop} { 
-        padding: 50px;
+    @media ${device.laptop} {
+        padding: 20px;
         grid-column: 1/-1;
+        min-height:275px;
+    }
+    @media ${device.laptop} {
+        padding: 20px;
+        max-width:1000px;
+        min-height:300px;
     }
 `
 const BorderText = styled.div`
-    grid-column:1 /4;
+    grid-column:1/4;
     background: #FFCD29;
     text-align:center;
     margin-top:auto;
 
     h1{
         margin:0;
+    }
+
+    @media ${device.tablet} { 
+        grid-column: 2/5;
+    }
+    @media ${device.laptop} { 
+        grid-column: 1/4;
     }
 
 `

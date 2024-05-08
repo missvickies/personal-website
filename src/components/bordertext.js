@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { device } from "./device"
 export default function BorderedText({children}){
     return (
         <Border>
@@ -11,10 +11,21 @@ export default function BorderedText({children}){
 const Border = styled.div`
     background: #FFCD29;
     text-align:center;
-    margin:auto;
 
     h1{
-        margin:0;
+        margin:auto;
+    }
+
+    @media ${device.mobileS}{
+        h1{
+            font-size:20px;
+        }
+    }
+
+    @media ${device.tablet}{
+        h1{
+            font-size:1.5em;
+        }
     }
 
 `

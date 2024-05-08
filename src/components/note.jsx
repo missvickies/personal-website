@@ -41,6 +41,11 @@ const Notepad = styled.div`
         grid-row:${(props)=> props.row};
         grid-column:${(props)=> props.col};
     }
+    
+    @media ${device.desktop}{
+        grid-row:${(props)=> props.row};
+        grid-column:${(props)=> props.col + 5};
+    }
 
 `
 
