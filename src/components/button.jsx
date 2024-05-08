@@ -17,7 +17,7 @@ export default function Button({col,children,linkTo,mailTo}){
 
 
 const ButtonStyle = styled.div`
-    grid-column:${(props)=> props.col-5};
+    grid-column:${(props)=> props.col};
     grid-row:-1;
     gap: 5px;
     z-index:1;

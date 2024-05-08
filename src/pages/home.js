@@ -159,6 +159,7 @@ export const Grid = styled.div`
     grid-template-columns: 75px auto 75px;
     width: 100vw;
     height:100vh;
+    
 `;
 
 export const SubGrid = styled.div`
@@ -225,14 +226,10 @@ export const Photo = styled.div`
 
 export const Intro = styled.div`
 
-grid-column: 1 /5;
-grid-row:2;
+    grid-column: 1 /5;
+    grid-row:2;
 
     @media ${device.laptop} { 
-        grid-column: 9 / 13;
-        grid-row:2;
-    }
-    @media ${device.laptopL} { 
         grid-column: 9 / 13;
         grid-row:2;
     }

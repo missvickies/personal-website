@@ -17,6 +17,8 @@ export default function Polaroid({children,row,col}){
 }
 
 const PolaroidBorder = styled.div`
+    grid-row:${(props)=> props.row};
+    grid-column:${(props)=> props.col};
     background:white;
     -webkit-box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.5); 
     box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.5);
