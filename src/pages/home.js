@@ -5,15 +5,13 @@ import Title from '../components/title';
 import Tab from '../components/tab'
 import Dp from '../assets/profile-img/profile.jpeg'
 import StarImg1 from '../assets/profile-img/Star-1.svg'
-import StarImg2 from '../assets/profile-img/Star.svg'
-import CoffeeImg from '../assets/profile-img/mug.svg'
 import Note from "../components/note"
 import { device } from '../components/device';
 import Polaroid from '../components/polaroid';
 import amplifyImage from '../assets/project-img/amplify.jpeg';
 
 export default function Home(){
-    document.body.style.backgroundColor= "var(--green)";
+    document.body.style.backgroundColor= "#FAF9F6";
 
 
     const notes = [
@@ -46,14 +44,22 @@ export default function Home(){
             row:7,
             col:4,
             color: "var(--blue)",
-            text:"seomthing else"
+            text:
+            <div>
+            <p>Another Fun Fact:</p>
+            <p>I love learning.</p>
+            <p>I've taught myself how to metal smith, sew, and bake. Currently trying to learn how to fish! </p>
+        </div>
         },
         {
             uid: "3",
             row:6,
             col:5,
             color: "var(--darkblue)",
-            text:"project details"
+            text:
+            <div>
+                <p>Take a look at my projects <a href ="https://www.notion.so/Hey-there-I-m-Vicki-bc50e4028cb44ce2a6d2c6bebecd5382"> here!</a></p>
+            </div>
         },
     ]
 
@@ -61,22 +67,10 @@ export default function Home(){
         <Grid>
             <div></div>
             <SubGrid>
-                {/* <Links>
-                    <FlexLinks/>
-                </Links> */}
-                {/* <Photo/> */}
-                {/* <Star1>
-                    <img src = {StarImg2} alt = "stars"/>
-                </Star1> */}
+              
                 <Star2>
                     <img src = {StarImg1} alt = "star"></img>
                 </Star2>
-                {/* <Note uid="1"/>
-                <Note uid = "1" color = "var(--yellow)"/>
-                <Note color = "var(--pink)"/> */}
-                {/* <Coffee>
-                    <img src = {CoffeeImg} alt = "coffee mug"></img>
-                </Coffee> */}
 
                 {notes.map((note)=>(
                     <Note uid={note.uid} row={note.row} col={note.col} color={note.color}><p>{note.text}</p>
@@ -99,16 +93,16 @@ export default function Home(){
 }
 
 const Star2 = styled.div`
-    z-index:1;
-    grid-column-start: 7;
-    grid-row-start: 3;
-    margin-left:25px;
-
-    -webkit-animation:spin 4s linear infinite;
+    
 
     @media ${device.laptop}{
         grid-column-start: 1;
         grid-row-start: 2;
+        z-index:1;
+        grid-column-start: 7;
+        grid-row-start: 3;
+        margin-left:25px;
+        -webkit-animation:spin 4s linear infinite;
     }
 
 `
@@ -146,13 +140,6 @@ const Star1 = styled.div`
         grid-row-start: 1;
     }
 `
-const Coffee = styled.div`
-    z-index:1;
-    grid-column: 2 / 6;
-    grid-row: 9/ -1;
-    overflow:hidden;
-
-    `
 
 export const Grid = styled.div`
     display:grid;
@@ -184,10 +171,17 @@ export const Links = styled.div`
 `;
 
 export const HorizontalLinks = styled.div`
-    grid-column: 7/-1;
+grid-row:  2;
+@media ${device.mobileS} { 
+    grid-column: 1 / -1;
+    grid-row:  5;
+}
+@media ${device.tablet} { 
+    grid-column: -4 / -1;
     grid-row:  2;
+}
 @media ${device.laptop} { 
-    grid-column: 15 / -1;
+    grid-column: -5 / -2;
     grid-row:  2;
 }
 @media ${device.desktop} { 

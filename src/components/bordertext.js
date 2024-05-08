@@ -10,8 +10,6 @@ export default function BorderedText({children}){
 
 const Border = styled.div`
     background: #FFCD29;
-    border: 5px solid #000000;
-    border-radius: 5px;
     text-align:center;
     margin:auto;
 

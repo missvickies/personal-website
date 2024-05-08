@@ -11,15 +11,19 @@ export default function Title({children}){
 }
 
 const BorderTitle = styled.h1`
-font-size: 100px;
+font-size: 80px;
 line-height: 100%;
 letter-spacing: -0.05em;
 margin:0;
 z-index:1;
 -webkit-text-fill-color: black;
--webkit-text-stroke: 5px white;
 position:absolute;
 
+@media ${device.mobileS} {
+    font-size: 80px;
+    grid-row:2;
+    grid-span:4;
+}
 @media ${device.laptop} {
     font-size: 100px;
 }
@@ -29,10 +33,9 @@ position:absolute;
 
 `
 const NoStroke = styled.h1`
-font-size: 100px;
+font-size: 80px;
 line-height: 100%;
 letter-spacing: -0.05em;
--webkit-text-stroke: 5px transparent;
 z-index:2;
 position:absolute;
 margin:0;

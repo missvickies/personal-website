@@ -1,8 +1,8 @@
 :root {
   --pink: #F8E4FF;
   --blue: #99E3F3;
-  --darkblue:#0D99FF;
-  --green:#14AE5C;
+  --darkblue:#FFE79A;
+  --green:;
   --yellow:#FFE79A;
   --purple:#7B61FF;
   --fullwidth: 100%;
@@ -27,7 +27,7 @@ code {
 }
 
 a {
-  all: unset;
+  /* all: unset; */
 }
 
 

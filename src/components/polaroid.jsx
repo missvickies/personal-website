@@ -23,13 +23,16 @@ const PolaroidBorder = styled.div`
     -webkit-box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.5); 
     box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.5);
     text-align:center;
-    grid-row:5;
-    grid-column:1;
     display:flex;
     height:400px;
     width:350px;
     flex-direction: column;
     justify-content: center;
+
+    @media ${device.mobileS}{
+        grid-row:6/9;
+        grid-column:1;
+    }
 
     @media ${device.laptop}{
         grid-row:${(props)=> props.row};

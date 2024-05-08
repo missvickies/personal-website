@@ -17,35 +17,26 @@ export default function Button({col,children,linkTo,mailTo}){
 
 
 const ButtonStyle = styled.div`
-    grid-column:${(props)=> props.col};
-    grid-row:-1;
-    gap: 5px;
-    z-index:1;
-    white-space: nowrap;
-    height:100%;
-    margin-top:50%;
+z-index:1;
+white-space: nowrap;
+margin:0;
+display:flex;
+align-items:center;
+font-size:2em;
+font-weight:bold;
+background: #0D99FF;
+padding: 15px;
+box-shadow: -10px 10px 0px #000000;
+border-radius: 15px;
 
-    h1{
-        width:180px;
-        margin:0;
-        background: #0D99FF;
-        padding: 5px 15px;
-        box-shadow: -10px 10px 0px #000000;
-        border-radius: 15px;
-    }
+&:hover{
+    background-color: var(--yellow)
+}
 
-    h1:hover{
-        background-color: var(--yellow)
-    }
-
-    h1:active {
-        background-color: var(--yellow);
-        box-shadow: -5px 5px 0px #000000;
-        transform: translate(-10px,10px);
-        }
-
-    @media ${device.laptop}{
-        grid-row:-2;
+&:active {
+    background-color: var(--yellow);
+    box-shadow: -5px 5px 0px #000000;
+    transform: translate(-10px,10px);
     }
 `
 
