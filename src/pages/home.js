@@ -105,52 +105,20 @@ const Star2 = styled.div`
     }
 
 `
-const Star1 = styled.div`
-    z-index:1;
-    grid-column-start: 5;
-    grid-row-start: 1;
-
-    -webkit-animation:spin 2s linear infinite;
-        
-    @keyframes spin {
-        0% {
-            -webkit-transform: rotate(0turn);
-        }
-        25% {
-            -webkit-transform: rotate(0.01turn);
-        }
-        50% {
-            -webkit-transform: rotate(0turn);
-            -webkit-transform: translate(15px);
-        }
-        75% {
-            -webkit-transform: rotate(-0.01turn);
-        }
-        100% {
-            -webkit-transform: rotate(0turn);
-        }    
-    }
-    @media ${device.laptop} { 
-        grid-column-start: 2;
-        grid-row-start: 1;
-    }
-    @media ${device.desktop} { 
-        grid-column-start: 7;
-        grid-row-start: 1;
-    }
-`
 
 export const Grid = styled.div`
     display:grid;
     width: 100vw;
     height:100vh;
+    grid-template-columns: 75px auto 75px;
 
     @media ${device.mobileS}{
         grid-template-columns: 25px auto 25px;
+        overflow:visible;
     }
     @media ${device.tablet}{
         grid-template-columns: 75px auto 75px;
-
+        overflow:hidden;
     }
     
 `;
@@ -247,8 +215,11 @@ export const Name = styled.div`
     }
 `
 export const About = styled.div`
-grid-column: 1 / -1;
-grid-row: 11/-1;
+
+@media ${device.mobileS} { 
+    grid-column: 1 / -1;
+    grid-row: 11/-1;
+}
 
 @media ${device.laptop} { 
     grid-column: 9 / -1;

@@ -22,7 +22,7 @@ export default function Tab(){
 }
 
 const FlexContainer =  styled.div`
-    height:100%;
+    display:grid;
     grid-template-columns: repeat(auto-fill, 75px);
     grid-template-rows: repeat(auto-fill, 75px);
     
@@ -43,7 +43,7 @@ const BorderCard = styled.div`
     background-color: white;
     padding: 25px;
     grid-column: 1/-1;
-    grid-row: 2 /-1;
+    margin-bottom:50px;
 
     @media ${device.tablet} { 
         padding: 20px;
@@ -52,10 +52,12 @@ const BorderCard = styled.div`
     @media ${device.laptop} {
         padding: 20px;
         grid-column: 1/-1;
+        grid-row: 2
         min-height:275px;
     }
     @media ${device.laptop} {
         padding: 20px;
+        grid-row: 2
         max-width:1000px;
         min-height:300px;
     }
