@@ -10,6 +10,7 @@ This is my personal website. It is a simple and straight to the point one-pager.
 
 ## Adding Responsiveness
 By using CSS-Grid and flex-box, we are able to achieve responsiveness on mobile, laptop, and desktop.
+<br>
 <img width="759" alt="Screen Shot 2024-05-27 at 4 05 24 PM" src="https://github.com/missvickies/personal-website/assets/42661718/cfcd3e1f-c593-44ec-980f-f8861223893c">
 
 
