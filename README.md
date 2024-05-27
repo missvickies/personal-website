@@ -22,9 +22,8 @@ By using CSS-Grid and flex-box, we are able to achieve responsiveness on mobile,
 
 ![iMac 27-inch Mockup.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e3549f3d-761b-4969-9578-0f685c4883d5/99c2ed0d-5748-4527-9e9e-de71206293b7/iMac_27-inch_Mockup.png)
 
-![Screen Shot 2024-05-09 at 4.27.04 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e3549f3d-761b-4969-9578-0f685c4883d5/a5d8fe7a-9dab-420f-b739-d6d7475a8a88/Screen_Shot_2024-05-09_at_4.27.04_PM.png)
-
 ### Overlapping Layouts
+![Screen Shot 2024-05-09 at 4.27.04 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e3549f3d-761b-4969-9578-0f685c4883d5/a5d8fe7a-9dab-420f-b739-d6d7475a8a88/Screen_Shot_2024-05-09_at_4.27.04_PM.png)
 
 By using CSS-Grid, I was able to create a 75x75 pixel sized grid over the page. 
 
