@@ -8,7 +8,7 @@ This project was designed on figma, then brought to life using React.js and Styl
 
 This is my personal website. It is a simple and straight to the point one-pager. The style inspiration came from Figma, an online editor where people can brainstorm, collaborate and give comments through sticky notes like the ones seen above. I selected this theme for my website because it mirrors a small part of my personality as I place great importance on teamwork, feedback, and personal growth.
 
-### Running the website
+## Running the website
 
 To start, open the project up and run:
 - npm install
